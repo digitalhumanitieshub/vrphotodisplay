@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  	<title>DHH VR Photo Gallery</title>
+    <style>
+      body
+      {
+        overflow:hidden;
+      }
+      h1
+      {
+        color: white;
+        text-align: center;
+        font-size: xx-large;
+      }
+      h2
+      {
+        color: white;
+        text-align: center;
+        font-size: x-large;
+      }
+      #maindiv
+      {
+        outline: 0px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        background-color: black;
+      }
+      #sphere
+      {
+        height: 86%;
+        margin-left: 230px;
+        margin-right: 230px;
+        background-color: black;
+      }
+      #leftside
+      {
+        float: left;
+        width: 220px;
+        background-color: black;
+        padding: 0px;
+      }
+      #rightside
+      {
+        float: right;
+        width: 220px;
+        background-color: black;
+        padding: 0px;
+      }
+      #topbit
+      {
+        height: 7%;
+        vertical-align: middle;
+        margin: 0px;
+        padding: 0px;
+      }
+      #bottombit
+      {
+        height: 7%;
+        vertical-align: middle;
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <script>
+    var imfile="";
+    var imtexts=["Faraday's statue near the station",
+                   "The garden behind the Hub",
+                   "The atrium outside the hub entrance",
+                   "A bugs eye view in the grass outside the hub",
+                   "The day of the I_Am_We ID card event",
+                   "A visit to the Hub from the lovely Birmingham Hippodrome people",
+                   "The day the people from Selfridges came to visit us",
+                   "The EDACS PGR Intro and Welcome event",
+                   "Just one of the good reasons to come to Hub events!",
+                   "Credits for our photo gallery app :-)"];
+  </script>
+	<script src="./code/three.min.js"></script>
+	<script src="./code/TrackballControls.js"></script>	
+	<script src="./code/Detector.js"></script>		
+  <body>
+    <div id="maindiv">
+      <div id="leftside">
+        <center>
+          <img src="./dhhlogo.jpg" />
+          <br /><br /><br />
+          <img src="./thumbnails/thumb1.png" onclick="setimage(1);" />
+          <img src="./thumbnails/thumb2.png" onclick="setimage(2);" />
+          <img src="./thumbnails/thumb3.png" onclick="setimage(3);" />
+          <img src="./thumbnails/thumb4.png" onclick="setimage(4);" />
+          <img src="./thumbnails/thumb5.png" onclick="setimage(5);" />
+        </center>
+      </div>
+      <div id="rightside">
+        <center>
+          <img src="./cake.jpg" />
+          <br /><br /><br />
+          <img src="./thumbnails/thumb6.png" onclick="setimage(6);" />
+          <img src="./thumbnails/thumb7.png" onclick="setimage(7);" />
+          <img src="./thumbnails/thumb8.png" onclick="setimage(8);" />
+          <img src="./thumbnails/thumb9.png" onclick="setimage(9);" />
+          <img src="./thumbnails/thumb10.png" onclick="setimage(10);" />
+        </center>
+      </div>
+      <div id="topbit"><h1>Digital Humanities Hub Virtual Reality Photo Gallery</h1></div>
+    	<div id="sphere"></div>
+      <div id="bottombit"></div>
+    </div>
+  	<script src="./code/photosphere.js"></script>
+  </body>
+</html>
